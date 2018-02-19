@@ -1,0 +1,54 @@
+\documentclass[11pt]{letter}
+
+\usepackage{eurosym}
+\usepackage{graphicx}
+\usepackage{invoice}
+
+\listfiles
+
+\address{
+  z.B. GmbH \\
+  Stra{\ss}e XX \\
+  XXXXX Berlin \\
+  Berlin, Germany
+}
+\signature{
+  Maxima Mustermann \\
+  Gesch\"aftsf\"uhrer
+}
+
+\begin{document}
+
+\begin{letter}{
+  Kunde Einz AG \\
+  Stra{\ss}e YY \\
+  YYYYY M\"unchen \\
+  A1B2C3D4E5
+}
+
+  \opening{Dear Lin,}
+
+  Conforming our agreement, I hereby present you the costs to be processed on
+  account of the contributions made to the development of the space probe.
+
+\begin{invoice}{\euro}{0.0} % {19.0}
+  \ProjectTitle{Development of Launch Program}
+  % Contents           Rate/Unit Count
+  \Fee{Requirement Specification and Proofing}{1200}{1}
+  \Fee{Software Development}{9000}{1}
+  \EBC{Third-party QA audit (by QA Corp 1)}{3000}
+  \EBC{Third-party sec audit (by Sec Corp 1)}{3000}
+  \EBC{Accomodation}{300}
+  \Discount{Down-payment}{5000}
+
+\end{invoice}
+
+  The funds are to be transacted into the account identified by the
+  IBAN \textbf{DE00 1234 5678 9098 8765 42} at the bank identified by the BIC
+  \textbf{XXXXDEB1XXX}.
+
+  \closing{Regards,}
+
+\end{letter}
+
+\end{document}
